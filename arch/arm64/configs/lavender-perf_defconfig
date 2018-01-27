@@ -668,18 +668,7 @@ CONFIG_NETWORK_SECMARK=y
 # CONFIG_NET_PTP_CLASSIFY is not set
 # CONFIG_NETWORK_PHY_TIMESTAMPING is not set
 CONFIG_NETFILTER=y
-# CONFIG_NETFILTER_DEBUG is not set
-CONFIG_NETFILTER_ADVANCED=y
-CONFIG_BRIDGE_NETFILTER=y
-
-#
-# Core Netfilter Configuration
-#
-CONFIG_NETFILTER_INGRESS=y
-CONFIG_NETFILTER_NETLINK=y
-# CONFIG_NETFILTER_NETLINK_ACCT is not set
-CONFIG_NETFILTER_NETLINK_QUEUE=y
-CONFIG_NETFILTER_NETLINK_LOG=y
+# CONFIG_BRIDGE_NETFILTER is not set
 CONFIG_NF_CONNTRACK=y
 CONFIG_NF_LOG_COMMON=y
 CONFIG_NF_CONNTRACK_MARK=y
@@ -1721,23 +1710,6 @@ CONFIG_WCNSS_MEM_PRE_ALLOC=y
 # CONFIG_CNSS_CRYPTO is not set
 # CONFIG_CNSS_QCA6290 is not set
 CONFIG_ATH_CARDS=y
-# CONFIG_ATH_DEBUG is not set
-# CONFIG_ATH_REG_DYNAMIC_USER_REG_HINTS is not set
-# CONFIG_ATH5K_PCI is not set
-# CONFIG_ATH6KL is not set
-# CONFIG_WIL6210 is not set
-# CONFIG_BRCMFMAC is not set
-# CONFIG_HOSTAP is not set
-# CONFIG_IPW2100 is not set
-# CONFIG_IPW2200 is not set
-# CONFIG_LIBERTAS is not set
-# CONFIG_HERMES is not set
-# CONFIG_WL_MEDIATEK is not set
-# CONFIG_WL_TI is not set
-# CONFIG_MWIFIEX is not set
-# CONFIG_CNSS is not set
-# CONFIG_CLD_DEBUG is not set
-# CONFIG_CLD_HL_SDIO_CORE is not set
 CONFIG_CLD_LL_CORE=y
 # CONFIG_CNSS2 is not set
 CONFIG_CNSS_GENL=y
@@ -2029,15 +2001,6 @@ CONFIG_HW_RANDOM_MSM_LEGACY=y
 # CONFIG_MSM_SMD_PKT is not set
 # CONFIG_XILLYBUS is not set
 CONFIG_MSM_ADSPRPC=y
-# CONFIG_MSM_RDBG is not set
-
-#
-# I2C support
-#
-CONFIG_I2C=y
-CONFIG_ACPI_I2C_OPREGION=y
-CONFIG_I2C_BOARDINFO=y
-CONFIG_I2C_COMPAT=y
 CONFIG_I2C_CHARDEV=y
 CONFIG_I2C_MUX=y
 
@@ -2698,84 +2661,7 @@ CONFIG_MEDIA_USB_SUPPORT=y
 # Webcam devices
 #
 CONFIG_USB_VIDEO_CLASS=y
-CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y
-CONFIG_USB_GSPCA=y
-# CONFIG_USB_M5602 is not set
-# CONFIG_USB_STV06XX is not set
-# CONFIG_USB_GL860 is not set
-# CONFIG_USB_GSPCA_BENQ is not set
-# CONFIG_USB_GSPCA_CONEX is not set
-# CONFIG_USB_GSPCA_CPIA1 is not set
-# CONFIG_USB_GSPCA_DTCS033 is not set
-# CONFIG_USB_GSPCA_ETOMS is not set
-# CONFIG_USB_GSPCA_FINEPIX is not set
-# CONFIG_USB_GSPCA_JEILINJ is not set
-# CONFIG_USB_GSPCA_JL2005BCD is not set
-# CONFIG_USB_GSPCA_KINECT is not set
-# CONFIG_USB_GSPCA_KONICA is not set
-# CONFIG_USB_GSPCA_MARS is not set
-# CONFIG_USB_GSPCA_MR97310A is not set
-# CONFIG_USB_GSPCA_NW80X is not set
-# CONFIG_USB_GSPCA_OV519 is not set
-# CONFIG_USB_GSPCA_OV534 is not set
-# CONFIG_USB_GSPCA_OV534_9 is not set
-# CONFIG_USB_GSPCA_PAC207 is not set
-# CONFIG_USB_GSPCA_PAC7302 is not set
-# CONFIG_USB_GSPCA_PAC7311 is not set
-# CONFIG_USB_GSPCA_SE401 is not set
-# CONFIG_USB_GSPCA_SN9C2028 is not set
-# CONFIG_USB_GSPCA_SN9C20X is not set
-# CONFIG_USB_GSPCA_SONIXB is not set
-# CONFIG_USB_GSPCA_SONIXJ is not set
-# CONFIG_USB_GSPCA_SPCA500 is not set
-# CONFIG_USB_GSPCA_SPCA501 is not set
-# CONFIG_USB_GSPCA_SPCA505 is not set
-# CONFIG_USB_GSPCA_SPCA506 is not set
-# CONFIG_USB_GSPCA_SPCA508 is not set
-# CONFIG_USB_GSPCA_SPCA561 is not set
-# CONFIG_USB_GSPCA_SPCA1528 is not set
-# CONFIG_USB_GSPCA_SQ905 is not set
-# CONFIG_USB_GSPCA_SQ905C is not set
-# CONFIG_USB_GSPCA_SQ930X is not set
-# CONFIG_USB_GSPCA_STK014 is not set
-# CONFIG_USB_GSPCA_STK1135 is not set
-# CONFIG_USB_GSPCA_STV0680 is not set
-# CONFIG_USB_GSPCA_SUNPLUS is not set
-# CONFIG_USB_GSPCA_T613 is not set
-# CONFIG_USB_GSPCA_TOPRO is not set
-# CONFIG_USB_GSPCA_TOUPTEK is not set
-# CONFIG_USB_GSPCA_TV8532 is not set
-# CONFIG_USB_GSPCA_VC032X is not set
-# CONFIG_USB_GSPCA_VICAM is not set
-# CONFIG_USB_GSPCA_XIRLINK_CIT is not set
-# CONFIG_USB_GSPCA_ZC3XX is not set
-# CONFIG_USB_PWC is not set
-# CONFIG_VIDEO_CPIA2 is not set
-# CONFIG_USB_ZR364XX is not set
-# CONFIG_USB_STKWEBCAM is not set
-# CONFIG_USB_S2255 is not set
-# CONFIG_VIDEO_USBTV is not set
-
-#
-# Analog/digital TV USB devices
-#
-# CONFIG_VIDEO_AU0828 is not set
-
-#
-# Digital TV USB devices
-#
-# CONFIG_DVB_USB_V2 is not set
-# CONFIG_DVB_TTUSB_BUDGET is not set
-# CONFIG_DVB_TTUSB_DEC is not set
-# CONFIG_SMS_USB_DRV is not set
-# CONFIG_DVB_B2C2_FLEXCOP_USB is not set
-# CONFIG_DVB_AS102 is not set
-
-#
-# Webcam, TV (analog/digital) USB devices
-#
-# CONFIG_VIDEO_EM28XX is not set
-# CONFIG_MEDIA_PCI_SUPPORT is not set
+# CONFIG_USB_GSPCA is not set
 CONFIG_V4L_PLATFORM_DRIVERS=y
 # CONFIG_VIDEO_CAFE_CCIC is not set
 # CONFIG_SOC_CAMERA is not set
@@ -2824,127 +2710,6 @@ CONFIG_MSM_VIDC_VMEM=y
 CONFIG_MSM_VIDC_GOVERNORS=y
 CONFIG_MSM_SDE_ROTATOR=y
 CONFIG_MSM_SDE_ROTATOR_EVTLOG_DEBUG=y
-# CONFIG_MSM_AIS is not set
-# CONFIG_DVB_MPQ is not set
-# CONFIG_TSPP is not set
-
-#
-# Supported MMC/SDIO adapters
-#
-# CONFIG_SMS_SDIO_DRV is not set
-# CONFIG_CYPRESS_FIRMWARE is not set
-
-#
-# Media ancillary drivers (tuners, sensors, i2c, frontends)
-#
-CONFIG_MEDIA_SUBDRV_AUTOSELECT=y
-
-#
-# Audio decoders, processors and mixers
-#
-
-#
-# RDS decoders
-#
-
-#
-# Video decoders
-#
-
-#
-# Video and audio decoders
-#
-
-#
-# Video encoders
-#
-
-#
-# Camera sensor devices
-#
-
-#
-# Flash devices
-#
-
-#
-# Video improvement chips
-#
-
-#
-# Audio/Video compression chips
-#
-
-#
-# Miscellaneous helper chips
-#
-
-#
-# Sensors used on soc_camera driver
-#
-CONFIG_MEDIA_TUNER=y
-CONFIG_MEDIA_TUNER_SIMPLE=y
-CONFIG_MEDIA_TUNER_TDA8290=y
-CONFIG_MEDIA_TUNER_TDA827X=y
-CONFIG_MEDIA_TUNER_TDA18271=y
-CONFIG_MEDIA_TUNER_TDA9887=y
-CONFIG_MEDIA_TUNER_MT20XX=y
-CONFIG_MEDIA_TUNER_XC2028=y
-CONFIG_MEDIA_TUNER_XC5000=y
-CONFIG_MEDIA_TUNER_XC4000=y
-CONFIG_MEDIA_TUNER_MC44S803=y
-
-#
-# Multistandard (satellite) frontends
-#
-
-#
-# Multistandard (cable + terrestrial) frontends
-#
-
-#
-# DVB-S (satellite) frontends
-#
-
-#
-# DVB-T (terrestrial) frontends
-#
-# CONFIG_DVB_AS102_FE is not set
-
-#
-# DVB-C (cable) frontends
-#
-
-#
-# ATSC (North American/Korean Terrestrial/Cable DTV) frontends
-#
-
-#
-# ISDB-T (terrestrial) frontends
-#
-
-#
-# ISDB-S (satellite) & ISDB-T (terrestrial) frontends
-#
-
-#
-# Digital terrestrial only tuners/PLL
-#
-
-#
-# SEC control devices for DVB-S
-#
-
-#
-# Tools to develop new frontends
-#
-# CONFIG_DVB_DUMMY_FE is not set
-
-#
-# Graphics support
-#
-CONFIG_VGA_ARB=y
-CONFIG_VGA_ARB_MAX_GPUS=16
 CONFIG_QCOM_KGSL=y
 # CONFIG_QCOM_KGSL_CFF_DUMP is not set
 CONFIG_QCOM_ADRENO_DEFAULT_GOVERNOR="msm-adreno-tz"
@@ -4715,52 +4480,10 @@ CONFIG_MISC_FILESYSTEMS=y
 CONFIG_ECRYPT_FS=y
 CONFIG_ECRYPT_FS_MESSAGING=y
 CONFIG_SDCARD_FS=y
-<<<<<<< HEAD
-# CONFIG_HFS_FS is not set
-# CONFIG_HFSPLUS_FS is not set
-# CONFIG_BEFS_FS is not set
-# CONFIG_BFS_FS is not set
-# CONFIG_EFS_FS is not set
-# CONFIG_LOGFS is not set
-# CONFIG_CRAMFS is not set
-# CONFIG_SQUASHFS is not set
-# CONFIG_VXFS_FS is not set
-# CONFIG_MINIX_FS is not set
-# CONFIG_OMFS_FS is not set
-# CONFIG_HPFS_FS is not set
-# CONFIG_QNX4FS_FS is not set
-# CONFIG_QNX6FS_FS is not set
-# CONFIG_ROMFS_FS is not set
-=======
->>>>>>> bbdf365afe8d... defconfig: lavender: Enable pstore
 CONFIG_PSTORE=y
 CONFIG_PSTORE_CONSOLE=y
 CONFIG_PSTORE_PMSG=y
 CONFIG_PSTORE_RAM=y
-<<<<<<< HEAD
-CONFIG_PSTORE_LAST_KMSG=y
-# CONFIG_SYSV_FS is not set
-# CONFIG_UFS_FS is not set
-CONFIG_NETWORK_FILESYSTEMS=y
-# CONFIG_NFS_FS is not set
-# CONFIG_NFSD is not set
-# CONFIG_CEPH_FS is not set
-CONFIG_CIFS=y
-# CONFIG_CIFS_STATS is not set
-# CONFIG_CIFS_WEAK_PW_HASH is not set
-# CONFIG_CIFS_UPCALL is not set
-# CONFIG_CIFS_XATTR is not set
-CONFIG_CIFS_DEBUG=y
-# CONFIG_CIFS_DEBUG2 is not set
-# CONFIG_CIFS_DFS_UPCALL is not set
-# CONFIG_CIFS_SMB2 is not set
-# CONFIG_NCP_FS is not set
-# CONFIG_CODA_FS is not set
-# CONFIG_AFS_FS is not set
-CONFIG_NLS=y
-CONFIG_NLS_DEFAULT="iso8859-1"
-=======
->>>>>>> bbdf365afe8d... defconfig: lavender: Enable pstore
 CONFIG_NLS_CODEPAGE_437=y
 # CONFIG_NLS_CODEPAGE_737 is not set
 # CONFIG_NLS_CODEPAGE_775 is not set
