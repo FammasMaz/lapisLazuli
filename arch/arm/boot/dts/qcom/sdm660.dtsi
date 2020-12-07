@@ -300,7 +300,7 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-      428 844
+      343 769
 				451 862
 			>;
 			idle-cost-data = <
@@ -319,7 +319,7 @@
 		};
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
-      428 11
+      343 9
                                 451 13
 			>;
 			idle-cost-data = <
@@ -1450,7 +1450,7 @@
 		qcom,governor-per-policy;
 
 		qcom,cpufreq-table-0 =
-      < 1747200 >,
+      < 1401600 >,
       < 1843200 >;
 
 		qcom,cpufreq-table-4 =
