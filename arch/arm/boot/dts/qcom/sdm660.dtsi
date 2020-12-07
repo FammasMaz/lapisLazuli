@@ -300,8 +300,8 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-      343 769
-				451 862
+      343 689
+				451 587
 			>;
 			idle-cost-data = <
 				20 16 10 8
@@ -309,8 +309,8 @@
 		};
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				908 1295
-				997 1474
+				908 1460
+				997 1514
 				1024 1632
 			>;
                         idle-cost-data = <
