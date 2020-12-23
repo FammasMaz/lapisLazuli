@@ -3882,6 +3882,12 @@ static ssize_t mdss_mdp_panel_disable_show(struct device *dev,
 	struct mdss_mdp_ctl *ctl;
 	struct mdss_panel_data *pdata;
 
+	/*
+	 * The event timer was killed due to messing with pm qos, and no one
+	 * uses autorefresh anyway.
+	 */
+	return -EINVAL;
+
 	if (!mfd) {
 		pr_err("Invalid mfd structure\n");
 		return -EINVAL;
