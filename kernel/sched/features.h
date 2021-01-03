@@ -16,7 +16,7 @@ SCHED_FEAT(START_DEBIT, true)
  * wakeup-preemption), since its likely going to consume data we
  * touched, increases cache locality.
  */
-SCHED_FEAT(NEXT_BUDDY, true)
+SCHED_FEAT(NEXT_BUDDY, false)
 
 /*
  * Prefer to schedule the task that ran last (when we did
@@ -29,7 +29,7 @@ SCHED_FEAT(LAST_BUDDY, true)
  * skip buddy i.e task called yield() is always skipped and the
  * next entity is selected to run irrespective of the vruntime
  */
-SCHED_FEAT(STRICT_SKIP_BUDDY, true)
+SCHED_FEAT(STRICT_SKIP_BUDDY, false)
 
 /*
  * Consider buddies to be cache hot, decreases the likelyness of a
@@ -97,7 +97,7 @@ SCHED_FEAT(ENERGY_AWARE, false)
  * If enabled, this can be used to inform the scheduler about capacity
  * restrictions.
  */
-SCHED_FEAT(MIN_CAPACITY_CAPPING, false)
+SCHED_FEAT(MIN_CAPACITY_CAPPING, true)
 
 /*
  * Enforce the priority of candidates selected by find_best_target()
