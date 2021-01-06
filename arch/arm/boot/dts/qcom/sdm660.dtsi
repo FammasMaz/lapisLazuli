@@ -309,8 +309,8 @@
 
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				650	1038
-				908	1345
+				908	1141
+				997	1449
 				1024	1632
 			>;
 			idle-cost-data = <
@@ -329,8 +329,8 @@
 
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
-				650	17
 				908	31
+				997	37
 				1024	44
 			>;
 			idle-cost-data = <
@@ -1453,8 +1453,8 @@
 			< 1843200 >;
 
 		qcom,cpufreq-table-4 =
-			< 1401600 >,
 			< 1958400 >,
+			< 2150400 >,
 			< 2208000 >;
 	};
 
