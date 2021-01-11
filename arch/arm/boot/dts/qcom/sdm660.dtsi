@@ -56,7 +56,7 @@
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea0>;
-			efficiency = <635>;
+			efficiency = <636>;
 			next-level-cache = <&L2_0>;
 			L2_0: l2-cache {
 				compatible = "arm,arch-cache";
@@ -87,7 +87,7 @@
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea1>;
-			efficiency = <635>;
+			efficiency = <636>;
 			next-level-cache = <&L2_0>;
 			L1_I_1: l1-icache {
 				compatible = "arm,arch-cache";
@@ -112,7 +112,7 @@
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea2>;
-			efficiency = <635>;
+			efficiency = <636>;
 			next-level-cache = <&L2_0>;
 			L1_I_2: l1-icache {
 				compatible = "arm,arch-cache";
@@ -137,7 +137,7 @@
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea3>;
-			efficiency = <635>;
+			efficiency = <636>;
 			next-level-cache = <&L2_0>;
 			L1_I_3: l1-icache {
 				compatible = "arm,arch-cache";
@@ -300,13 +300,13 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-				  182   26
-				  259   46
-				  321   49
-				  404   94
-				  442  109
-				  503  145
-				  531  176
+				  182   48
+				  260   72
+				  321   79
+				  404  125
+				  442  134
+				  503  179
+				  531  228
 			>;
 			idle-cost-data = <
 				20 16 12 8
@@ -315,12 +315,12 @@
 
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				  516  188
-				  650  293
-				  810  431
-				  908  523
-				  997  626
-				 1024  733
+				  516  220
+				  649  317
+				  810  474
+				  908  578
+				  997  694
+				 1024  736
 			>;
 			idle-cost-data = <
 				100 80 60 40
@@ -330,7 +330,7 @@
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
 				  182    8
-				  259   14
+				  260   14
 				  321   20
 				  404   29
 				  442   35
@@ -345,7 +345,7 @@
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
 				  516  135
-				  650  193
+				  649  193
 				  810  272
 				  908  363
 				  997  519
