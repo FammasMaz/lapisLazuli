@@ -29,9 +29,6 @@ int sched_boost_handler(struct ctl_table *table, int write,
 	int ret;
 	unsigned int *data = (unsigned int *)table->data;
 	unsigned int old_val;
-	
-	if (task_is_booster(current))
-		return 0;
 
 	// Backup current sysctl_sched_boost value
 	old_val = *data;
