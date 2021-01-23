@@ -6517,7 +6517,7 @@ schedtune_cpu_margin(unsigned long util, int cpu)
 {
 	int boost = schedtune_cpu_boost(cpu);
 
-	if (boost == 0)
+	if ((boost == 0) || (boost == 10))
 		return 0;
 
 	return schedtune_margin(util, boost, capacity_orig_of(cpu));
@@ -6530,7 +6530,7 @@ schedtune_task_margin(struct task_struct *p)
 	unsigned long util;
 	long margin;
 
-	if (boost == 0)
+	if ((boost == 0) || (boost == 10))
 		return 0;
 
 	util = task_util_est(p);
@@ -6563,7 +6563,7 @@ boosted_cpu_util(int cpu)
 
 	trace_sched_boost_cpu(cpu, util, margin);
 
-	return util;
+	return util + margin;
 }
 
 static inline unsigned long
@@ -6574,7 +6574,7 @@ boosted_task_util(struct task_struct *p)
 
 	trace_sched_boost_task(p, util, margin);
 
-	return util;
+	return util + margin;
 }
 
 static unsigned long capacity_spare_without(int cpu, struct task_struct *p)
