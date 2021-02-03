@@ -29,7 +29,6 @@
 #include <linux/firmware.h>
 #include <linux/dmaengine.h>
 #include <linux/pm_runtime.h>
-#include <linux/pm_qos.h>
 #include <sound/core.h>
 #include <sound/pcm.h>
 #include <sound/soc.h>
@@ -421,7 +420,6 @@ int sst_load_fw(struct intel_sst_drv *sst_drv_ctx)
 		return -ENOMEM;
 
 	/* Prevent C-states beyond C6 */
-	pm_qos_update_request(sst_drv_ctx->qos, 0);
 
 	sst_drv_ctx->sst_state = SST_FW_LOADING;
 
@@ -451,7 +449,6 @@ int sst_load_fw(struct intel_sst_drv *sst_drv_ctx)
 
 restore:
 	/* Re-enable Deeper C-states beyond C6 */
-	pm_qos_update_request(sst_drv_ctx->qos, PM_QOS_DEFAULT_VALUE);
 	sst_free_block(sst_drv_ctx, block);
 	dev_dbg(sst_drv_ctx->dev, "fw load successful!!!\n");
 
@@ -460,4 +457,3 @@ restore:
 	sst_drv_ctx->sst_state = SST_FW_RUNNING;
 	return ret_val;
 }
-
