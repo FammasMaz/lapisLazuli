@@ -47,15 +47,14 @@
 
 		CPU0: cpu@0 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x0>;
-            clock-frequency = <1843200000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea0>;
-			efficiency = <636>;
+			efficiency = <1024>;
 			next-level-cache = <&L2_0>;
 			L2_0: l2-cache {
 				compatible = "arm,arch-cache";
@@ -78,15 +77,14 @@
 
 		CPU1: cpu@1 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x1>;
-            clock-frequency = <1843200000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea1>;
-			efficiency = <636>;
+			efficiency = <1024>;
 			next-level-cache = <&L2_0>;
 			L1_I_1: l1-icache {
 				compatible = "arm,arch-cache";
@@ -103,15 +101,14 @@
 
 		CPU2: cpu@2 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x2>;
-            clock-frequency = <1843200000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea2>;
-			efficiency = <636>;
+			efficiency = <1024>;
 			next-level-cache = <&L2_0>;
 			L1_I_2: l1-icache {
 				compatible = "arm,arch-cache";
@@ -128,15 +125,14 @@
 
 		CPU3: cpu@3 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x3>;
-            clock-frequency = <1843200000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			qcom,ea = <&ea3>;
-			efficiency = <636>;
+			efficiency = <1024>;
 			next-level-cache = <&L2_0>;
 			L1_I_3: l1-icache {
 				compatible = "arm,arch-cache";
@@ -153,15 +149,14 @@
 
 		CPU4: cpu@100 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x100>;
-            clock-frequency = <2208000000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile1>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea4>;
-			efficiency = <1024>;
+			efficiency = <1638>;
 			next-level-cache = <&L2_1>;
 			L2_1: l2-cache {
 				compatible = "arm,arch-cache";
@@ -182,15 +177,14 @@
 
 		CPU5: cpu@101 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x101>;
-            clock-frequency = <2208000000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile2>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea5>;
-			efficiency = <1024>;
+			efficiency = <1638>;
 			next-level-cache = <&L2_1>;
 			L1_I_101: l1-icache {
 				compatible = "arm,arch-cache";
@@ -207,15 +201,14 @@
 
 		CPU6: cpu@102 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x102>;
-            clock-frequency = <2208000000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile3>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea6>;
-			efficiency = <1024>;
+			efficiency = <1638>;
 			next-level-cache = <&L2_1>;
 			L1_I_102: l1-icache {
 				compatible = "arm,arch-cache";
@@ -232,15 +225,14 @@
 
 		CPU7: cpu@103 {
 			device_type = "cpu";
-			compatible = "arm,kryo";
+			compatible = "arm,armv8";
 			reg = <0x0 0x103>;
-            clock-frequency = <2208000000>;
 			enable-method = "psci";
 			qcom,limits-info = <&mitigation_profile4>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			qcom,ea = <&ea7>;
-			efficiency = <1024>;
+			efficiency = <1638>;
 			next-level-cache = <&L2_1>;
 			L1_I_103: l1-icache {
 				compatible = "arm,arch-cache";
@@ -299,27 +291,29 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-				  182   48
-				  260   72
-				  321   79
-				  404  125
-				  442  134
-				  503  179
-				  531  228
+				633600	41
+				902400	70
+				1113600	83
+				1401600	146
+				1536000	158
+				1747200	228
+				1843200	285
 			>;
 			idle-cost-data = <
-				20 16 12 8
+				20 16 10 8
 			>;
 		};
 
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				  516  220
-				  649  317
-				  810  474
-				  908  578
-				  997  694
-				 1024  736
+				1113600	307
+				1401600	485
+				1747200	857
+				1804800	883
+				1958400	1222
+				2150400	1592
+				2208000	1632
+				2457600	2080
 			>;
 			idle-cost-data = <
 				100 80 60 40
@@ -328,13 +322,13 @@
 
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
-				  182    8
-				  260   14
-				  321   20
-				  404   29
-				  442   35
-				  503   49
-				  531   62
+				633600	4
+				902400	5
+				1113600	7
+				1401600	9
+				1536000	9
+				1747200	11
+				1843200	13
 			>;
 			idle-cost-data = <
 				4 3 2 1
@@ -343,12 +337,14 @@
 
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
-				  516  135
-				  649  193
-				  810  272
-				  908  363
-				  997  519
-				 1024  585
+				1113600	14
+				1401600	17
+				1747200	25
+				1804800	31
+				1958400	31
+				2150400	37
+				2208000	44
+				2457600	45
 			>;
 			idle-cost-data = <
 				4 3 2 1
