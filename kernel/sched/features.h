@@ -116,12 +116,6 @@ SCHED_FEAT(EAS_PREFER_IDLE, true)
 SCHED_FEAT(FBT_STRICT_ORDER, false)
 
 /*
-* Inflate the effective utilization of SchedTune-boosted tasks, which
-* generally leads to usage of higher frequencies.
-* If disabled, boosts will only bias tasks to higher-capacity CPUs.
-*/
-SCHED_FEAT(SCHEDTUNE_BOOST_UTIL, false)
-/*
  * Apply schedtune boost hold to tasks of all sched classes.
  * If enabled, schedtune will hold the boost applied to a CPU
  * for 50ms regardless of task activation - if the task is
