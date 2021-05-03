@@ -737,7 +737,7 @@ boost_write(struct cgroup_subsys_state *css, struct cftype *cft,
 	int boost_pct;
 
 	if (!strcmp(css->cgroup->kn->name, "top-app"))
-		boost = 2;
+		boost = 0;
 
 	if (boost < -100 || boost > 100)
 		return -EINVAL;
@@ -847,7 +847,7 @@ static void write_default_values(struct cgroup_subsys_state *css)
 		{ "background",	0, 0 },
 		{ "foreground",	0, 1 },
 		{ "rt",		0, 0 },
-		{ "top-app",	2, 1 },
+		{ "top-app",	0, 1 },
 	};
 	int i;
 
