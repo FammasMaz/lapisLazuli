@@ -307,21 +307,21 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-				  442  134
-				  503  179
-				  531  228
+				  442  143
+				  503  178
+				  531  232
 			>;
 			idle-cost-data = <
-				20 16 12 8
+				20 16 10 8
 			>;
 		};
 
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				  810  474
-				  908  578
-				  997  694
-				 1024  736
+				  810  468
+				  908  574
+				  998  699
+				 1024  744
 			>;
 			idle-cost-data = <
 				100 80 60 40
@@ -330,9 +330,9 @@
 
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
-				  442   35
-				  503   49
-				  531   62
+				  442    9
+				  503   11
+				  531   13
 			>;
 			idle-cost-data = <
 				4 3 2 1
@@ -341,16 +341,16 @@
 
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
-				  810  272
-				  908  363
-				  997  519
-				 1024  585
+				  810   25
+				  908   31
+				  998   37
+				 1024   44
 			>;
 			idle-cost-data = <
 				4 3 2 1
 			>;
 		};
-	};
+	};	
 	clocks {
 		xo_board {
 			compatible = "fixed-clock";
