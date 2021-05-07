@@ -307,13 +307,13 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-				  182   47
-				  260   74
-				  321   82
-				  403  130
-				  442  143
-				  503  178
-				  531  232
+				  633600    47
+				  902400    74
+				  1113600   82
+				  1401600  130
+				  1536000  143
+				  1747200  178
+				  1843200  232
 			>;
 			idle-cost-data = <
 				20 16 10 8
@@ -322,12 +322,12 @@
 
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
-				  517  239
-				  650  331
-				  810  468
-				  908  574
-				  998  699
-				 1024  744
+				  1113600  239
+				  1401600  331
+				  1747200  468
+				  1958400  574
+				  2150400  699
+				  2208000  744
 			>;
 			idle-cost-data = <
 				100 80 60 40
@@ -336,13 +336,13 @@
 
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
-				  182    4
-				  260    5
-				  321    7
-				  403    9
-				  442    9
-				  503   11
-				  531   13
+				  633600     4
+				  902400     5
+				  1113600    7
+				  1401600    9
+				  1536000    9
+				  1747200   11
+				  1843200   13
 			>;
 			idle-cost-data = <
 				4 3 2 1
@@ -351,12 +351,12 @@
 
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
-				  517   14
-				  650   17
-				  810   25
-				  908   31
-				  998   37
-				 1024   44
+				  1113600   14
+				  1401600   17
+				  1747200   25
+				  1958400   31
+				  2150400   37
+				  2208000   44
 			>;
 			idle-cost-data = <
 				4 3 2 1
@@ -1210,7 +1210,7 @@
 
 	cpubw: qcom,cpubw {
 		compatible = "qcom,devbw";
-		governor = "bw_hwmon";
+		governor = "performance";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
@@ -1241,7 +1241,7 @@
 
 	mincpubw: qcom,mincpubw {
 		compatible = "qcom,devbw";
-		governor = "cpufreq";
+		governor = "powersave";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
