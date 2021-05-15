@@ -42,7 +42,7 @@ struct task_struct *kthread_create_on_cpu(int (*threadfn)(void *data),
  *
  * Same as kthread_create().
  */
-#define kthread_run_perf_critical(perfmask, threadfn, data, namefmt, ...)		   \
+#define kthread_run_perf_critical(threadfn, data, namefmt, ...)		   \
 ({									   \
 	struct task_struct *__k						   \
 		= kthread_create(threadfn, data, namefmt, ## __VA_ARGS__); \
