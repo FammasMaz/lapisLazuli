@@ -3457,13 +3457,9 @@ EXPORT_SYMBOL(hci_register_dev);
 /* Unregister HCI device */
 void hci_unregister_dev(struct hci_dev *hdev)
 {
-<<<<<<< HEAD
 	int id;
 
 	BT_DBG("%pK name %s bus %d", hdev, hdev->name, hdev->bus);
-=======
-	BT_DBG("%p name %s bus %d", hdev, hdev->name, hdev->bus);
->>>>>>> 927f07e0f82ab0771823f4de7fcec7b52cfc77ae
 
 	hci_dev_set_flag(hdev, HCI_UNREGISTER);
 
