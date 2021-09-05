@@ -299,9 +299,7 @@
 
 		CPU_COST_0: core-cost0 {
 			busy-cost-data = <
-				  1113600   87
 				  1401600  131
-				  1536000  145
 				  1747200  195
 				  1843200  241
 			>;
@@ -313,9 +311,7 @@
 		CPU_COST_1: core-cost1 {
 			busy-cost-data = <
 				  1113600  248
-				  1401600  361
 				  1747200  496
-				  1958400  621
 				  2150400  708
 				  2208000  810
 			>;
@@ -326,9 +322,7 @@
 
 		CLUSTER_COST_0: cluster-cost0 {
 			busy-cost-data = <
-				  1113600    7
 				  1401600    9
-				  1536000    9
 				  1747200   11
 				  1843200   13
 			>;
@@ -340,9 +334,7 @@
 		CLUSTER_COST_1: cluster-cost1 {
 			busy-cost-data = <
 				  1113600   14
-				  1401600   17
 				  1747200   25
-				  1958400   31
 				  2150400   37
 				  2208000   44
 			>;
@@ -1198,7 +1190,7 @@
 
 	cpubw: qcom,cpubw {
 		compatible = "qcom,devbw";
-		governor = "performance";
+		governor = "bw_hwmon";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
@@ -1229,7 +1221,7 @@
 
 	mincpubw: qcom,mincpubw {
 		compatible = "qcom,devbw";
-		governor = "powersave";
+		governor = "cpufreq";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
@@ -1461,17 +1453,13 @@
 		qcom,governor-per-policy;
 
 		qcom,cpufreq-table-0 =
-			< 1113600 >,
 			< 1401600 >,
-			< 1536000 >,
 			< 1747200 >,
 			< 1843200 >;
 
 		qcom,cpufreq-table-4 =
 			< 1113600 >,
-			< 1401600 >,
 			< 1747200 >,
-			< 1958400 >,
 			< 2150400 >,
 			< 2208000 >;
 	};
