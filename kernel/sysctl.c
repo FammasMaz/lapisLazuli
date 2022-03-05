@@ -134,8 +134,6 @@ static int one_hundred = 100;
 #ifdef CONFIG_PRINTK
 static int ten_thousand = 10000;
 #endif
-static int __maybe_unused two_hundred_million = 200000000;
-static int two_hundred_fifty_five = 255;
 #ifdef CONFIG_PERF_EVENTS
 static int six_hundred_forty_kb = 640 * 1024;
 #endif
@@ -514,31 +512,6 @@ static struct ctl_table kern_table[] = {
 		.extra1		= &one,
 	},
 #endif
-	{
-		.procname	= "sched_lib_name",
-		.data		= sched_lib_name,
-		.maxlen		= LIB_PATH_LENGTH,
-		.mode		= 0644,
-		.proc_handler	= proc_dostring,
-	},
-	{
-		.procname	= "sched_lib_mask_check",
-		.data		= &sched_lib_mask_check,
-		.maxlen		= sizeof(unsigned int),
-		.mode		= 0644,
-		.proc_handler	= proc_douintvec_minmax,
-		.extra1		= &zero,
-		.extra2		= &two_hundred_fifty_five,
-	},
-	{
-		.procname	= "sched_lib_mask_force",
-		.data		= &sched_lib_mask_force,
-		.maxlen		= sizeof(unsigned int),
-		.mode		= 0644,
-		.proc_handler	= proc_douintvec_minmax,
-		.extra1		= &zero,
-		.extra2		= &two_hundred_fifty_five,
-	},
 #ifdef CONFIG_SCHED_TUNE
 	{
 		.procname	= "sched_cfs_boost",
